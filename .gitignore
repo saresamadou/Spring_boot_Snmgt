@@ -12,4 +12,5 @@
 hs_err_pid*
 
 #ignore application configuration file
-*.properties
+./bin/application.properties
+./build/resources/main/application.properties
