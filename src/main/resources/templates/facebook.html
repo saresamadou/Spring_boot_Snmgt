@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Hello Facebook</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<h3>Hello, <span th:text="${facebookProfile.name}">Some User</span>!</h3>
+
+		<h4>Your Link : <span th:text="${facebookProfile.link}"></span></h4>
+		
+		<h4>Here is your feed:</h4>
+
+		<div th:each="post:${feed}">
+			<b th:text="${post.from.name}">from</b> wrote:
+			<p th:text="${post.message}">message text</p>
+			<img th:if="${post.picture}" th:src="${post.picture}"/>
+			<hr/>
+		</div>
+		</div>
+	</body>
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+</html>

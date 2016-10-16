@@ -1,0 +1,9 @@
+{
+  "groups": [{
+    "name": "snmgt",
+    "type": "aboduou.samadou.snmgt.settings.ApplicationSettings",
+    "sourceType": "aboduou.samadou.snmgt.settings.ApplicationSettings"
+  }],
+  "properties": [],
+  "hints": []
+}
